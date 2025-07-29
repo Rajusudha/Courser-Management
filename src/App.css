@@ -1,3 +1,9 @@
+body {
+  background: #f4f6fb;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +40,119 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.app-main {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 36px 40px;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3a4b;
+  margin-bottom: 32px;
+}
+
+.section {
+  margin-bottom: 36px;
+}
+
+.section h2 {
+  color: #1766c0;
+  margin-bottom: 18px;
+}
+
+.flex-row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f9f9fb;
+  border-radius: 12px;
+  padding: 24px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-width: 250px;
+  flex: 1;
+}
+
+input, select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  background: #2d8cf0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-right: 6px;
+}
+
+button:hover {
+  background: #1766c0;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+label {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    padding: 16px 8px;
+  }
+  .flex-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-main {
+    padding: 4px 2px;
+    min-width: 0;
+  }
+  .section {
+    padding: 0 !important;
+  }
+  .MuiCard-root {
+    min-width: 0 !important;
+    margin-bottom: 18px;
+  }
+  .MuiStack-root {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  button, .MuiButton-root {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1rem;
+  }
+  input, .MuiInputBase-input {
+    font-size: 1rem;
   }
 }
